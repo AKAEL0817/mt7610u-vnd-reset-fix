@@ -1,6 +1,6 @@
 # Prebuilt package
 
-`kmod-mt76x0u_6.6.144.2025.11.06~eb567bc7-r2_x86_64.ipk` — the exact package that was built and verified on real hardware (see [`../docs/test-results.md`](../docs/test-results.md)). It is distributed as a zipped asset on this project's [Releases page](https://github.com/AKAEL0817/mt7610u-vnd-reset-fix/releases) (GitHub does not accept `.ipk` uploads); this directory documents its checksum and applicability.
+`kmod-mt76x0u_6.6.144.2025.11.06~eb567bc7-r2_x86_64.ipk` — the exact package that was built and verified on real hardware (see [`../docs/test-results.md`](../docs/test-results.md)). It is attached directly to the v1.0.0 release on this project's [Releases page](https://github.com/AKAEL0817/mt7610u-vnd-reset-fix/releases) (GitHub shows the file name with `~` replaced by `.` — cosmetic only); this directory documents its checksum and applicability.
 
 **Use it only on the exact platform it was built for:**
 
