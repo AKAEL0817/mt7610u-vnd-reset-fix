@@ -48,6 +48,10 @@ Environment: OpenWrt 24.10.8, kernel 6.6.144, mt76 `2025.11.06~eb567bc7`, adapte
 
 Full logs: [`docs/dmesg-before-stock-driver.txt`](docs/dmesg-before-stock-driver.txt) · [`docs/dmesg-after-patched-driver.txt`](docs/dmesg-after-patched-driver.txt) · analysis in [`docs/`](docs/).
 
+## Prebuilt package
+
+For the **exact** verified platform (OpenWrt 24.10.8, x86/64, kernel 6.6.144), a ready-built `kmod-mt76x0u` r2 ipk is available from the [Releases page](https://github.com/AKAEL0817/mt7610u-vnd-reset-fix/releases). It is vermagic-locked to that kernel build — every other release or target must build from the patch instead (see Quick start below). Checksum and details: [`dist/README.md`](dist/README.md).
+
 ## Applicability — read before using
 
 - **Verified only for:** OpenWrt 24.10.8 / kernel 6.6.144 / mt76 snapshot `eb567bc7`, on an adapter reporting ASIC revision `76100002`.
