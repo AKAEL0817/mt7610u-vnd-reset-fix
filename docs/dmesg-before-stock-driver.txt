@@ -1,0 +1,141 @@
+[  394.774621] usb 2-1: reset high-speed USB device number 2 using xhci_hcd
+[  394.963374] mt76x0u 2-1:1.0: ASIC revision: 76100002 MAC revision: 76502000
+[  395.297872] mt76x0u 2-1:1.0: rx urb failed: -32
+[  395.300007] mt76x0u 2-1:1.0: rx urb failed: -32
+[  395.301407] mt76x0u 2-1:1.0: rx urb failed: -32
+[  395.302787] mt76x0u 2-1:1.0: rx urb failed: -32
+[  395.304157] mt76x0u 2-1:1.0: rx urb failed: -32
+[  395.305840] mt76x0u 2-1:1.0: rx urb failed: -32
+[  395.307200] mt76x0u 2-1:1.0: rx urb failed: -32
+[  395.308671] mt76x0u 2-1:1.0: rx urb failed: -32
+[  395.310059] mt76x0u 2-1:1.0: rx urb failed: -32
+[  395.311442] mt76x0u 2-1:1.0: rx urb failed: -32
+[  398.563546] mt76x0u 2-1:1.0: vendor request req:07 off:09a8 failed:-110
+[  400.303239] mt76u_complete_rx: 22834 callbacks suppressed
+[  400.303246] mt76x0u 2-1:1.0: rx urb failed: -32
+[  400.306249] mt76x0u 2-1:1.0: rx urb failed: -32
+[  400.307622] mt76x0u 2-1:1.0: rx urb failed: -32
+[  400.308952] mt76x0u 2-1:1.0: rx urb failed: -32
+[  400.310278] mt76x0u 2-1:1.0: rx urb failed: -32
+[  400.311600] mt76x0u 2-1:1.0: rx urb failed: -32
+[  400.312929] mt76x0u 2-1:1.0: rx urb failed: -32
+[  400.314271] mt76x0u 2-1:1.0: rx urb failed: -32
+[  400.315582] mt76x0u 2-1:1.0: rx urb failed: -32
+[  400.316898] mt76x0u 2-1:1.0: rx urb failed: -32
+[  401.763002] mt76x0u 2-1:1.0: vendor request req:06 off:09a8 failed:-110
+[  404.993037] mt76x0u 2-1:1.0: vendor request req:42 off:0230 failed:-110
+[  405.312243] mt76u_complete_rx: 22163 callbacks suppressed
+[  405.312249] mt76x0u 2-1:1.0: rx urb failed: -32
+[  405.315104] mt76x0u 2-1:1.0: rx urb failed: -32
+[  405.316431] mt76x0u 2-1:1.0: rx urb failed: -32
+[  405.317743] mt76x0u 2-1:1.0: rx urb failed: -32
+[  405.319046] mt76x0u 2-1:1.0: rx urb failed: -32
+[  405.320330] mt76x0u 2-1:1.0: rx urb failed: -32
+[  405.321611] mt76x0u 2-1:1.0: rx urb failed: -32
+[  405.322928] mt76x0u 2-1:1.0: rx urb failed: -32
+[  405.324207] mt76x0u 2-1:1.0: rx urb failed: -32
+[  405.325475] mt76x0u 2-1:1.0: rx urb failed: -32
+[  408.211830] mt76x0u 2-1:1.0: vendor request req:42 off:0232 failed:-110
+[  410.321225] mt76u_complete_rx: 23583 callbacks suppressed
+[  410.322628] mt76x0u 2-1:1.0: rx urb failed: -32
+[  410.323937] mt76x0u 2-1:1.0: rx urb failed: -32
+[  410.325194] mt76x0u 2-1:1.0: rx urb failed: -32
+[  410.326451] mt76x0u 2-1:1.0: rx urb failed: -32
+[  410.327716] mt76x0u 2-1:1.0: rx urb failed: -32
+[  410.328966] mt76x0u 2-1:1.0: rx urb failed: -32
+[  410.330221] mt76x0u 2-1:1.0: rx urb failed: -32
+[  410.331496] mt76x0u 2-1:1.0: rx urb failed: -32
+[  410.332789] mt76x0u 2-1:1.0: rx urb failed: -32
+[  410.334023] mt76x0u 2-1:1.0: rx urb failed: -32
+[  411.410933] mt76x0u 2-1:1.0: vendor request req:42 off:0234 failed:-110
+[  414.610509] mt76x0u 2-1:1.0: vendor request req:42 off:0236 failed:-110
+[  415.330163] mt76u_complete_rx: 23537 callbacks suppressed
+[  415.330170] mt76x0u 2-1:1.0: rx urb failed: -32
+[  415.332960] mt76x0u 2-1:1.0: rx urb failed: -32
+[  415.334227] mt76x0u 2-1:1.0: rx urb failed: -32
+[  415.335485] mt76x0u 2-1:1.0: rx urb failed: -32
+[  415.336765] mt76x0u 2-1:1.0: rx urb failed: -32
+[  415.338033] mt76x0u 2-1:1.0: rx urb failed: -32
+[  415.339442] mt76x0u 2-1:1.0: rx urb failed: -32
+[  415.340717] mt76x0u 2-1:1.0: rx urb failed: -32
+[  415.342029] mt76x0u 2-1:1.0: rx urb failed: -32
+[  415.343290] mt76x0u 2-1:1.0: rx urb failed: -32
+[  417.821595] mt76x0u 2-1:1.0: vendor request req:07 off:09a8 failed:-110
+[  420.339242] mt76u_complete_rx: 22398 callbacks suppressed
+[  420.339250] mt76x0u 2-1:1.0: rx urb failed: -32
+[  420.342319] mt76x0u 2-1:1.0: rx urb failed: -32
+[  420.343658] mt76x0u 2-1:1.0: rx urb failed: -32
+[  420.345002] mt76x0u 2-1:1.0: rx urb failed: -32
+[  420.346354] mt76x0u 2-1:1.0: rx urb failed: -32
+[  420.347646] mt76x0u 2-1:1.0: rx urb failed: -32
+[  420.348947] mt76x0u 2-1:1.0: rx urb failed: -32
+[  420.350244] mt76x0u 2-1:1.0: rx urb failed: -32
+[  420.351776] mt76x0u 2-1:1.0: rx urb failed: -32
+[  420.353052] mt76x0u 2-1:1.0: rx urb failed: -32
+[  421.039331] mt76x0u 2-1:1.0: vendor request req:06 off:09a8 failed:-110
+[  424.278518] mt76x0u 2-1:1.0: vendor request req:42 off:0230 failed:-110
+[  425.348238] mt76u_complete_rx: 22880 callbacks suppressed
+[  425.348244] mt76x0u 2-1:1.0: rx urb failed: -32
+[  425.351031] mt76x0u 2-1:1.0: rx urb failed: -32
+[  425.352312] mt76x0u 2-1:1.0: rx urb failed: -32
+[  425.353604] mt76x0u 2-1:1.0: rx urb failed: -32
+[  425.354892] mt76x0u 2-1:1.0: rx urb failed: -32
+[  425.356175] mt76x0u 2-1:1.0: rx urb failed: -32
+[  425.357461] mt76x0u 2-1:1.0: rx urb failed: -32
+[  425.358763] mt76x0u 2-1:1.0: rx urb failed: -32
+[  425.360061] mt76x0u 2-1:1.0: rx urb failed: -32
+[  425.361346] mt76x0u 2-1:1.0: rx urb failed: -32
+[  427.477779] mt76x0u 2-1:1.0: vendor request req:42 off:0232 failed:-110
+[  430.357300] mt76u_complete_rx: 22112 callbacks suppressed
+[  430.357307] mt76x0u 2-1:1.0: rx urb failed: -32
+[  430.360076] mt76x0u 2-1:1.0: rx urb failed: -32
+[  430.361398] mt76x0u 2-1:1.0: rx urb failed: -32
+[  430.362706] mt76x0u 2-1:1.0: rx urb failed: -32
+[  430.363973] mt76x0u 2-1:1.0: rx urb failed: -32
+[  430.365234] mt76x0u 2-1:1.0: rx urb failed: -32
+[  430.366517] mt76x0u 2-1:1.0: rx urb failed: -32
+[  430.367806] mt76x0u 2-1:1.0: rx urb failed: -32
+[  430.369107] mt76x0u 2-1:1.0: rx urb failed: -32
+[  430.370409] mt76x0u 2-1:1.0: rx urb failed: -32
+[  430.687284] mt76x0u 2-1:1.0: vendor request req:42 off:0234 failed:-110
+[  433.887217] mt76x0u 2-1:1.0: vendor request req:42 off:0236 failed:-110
+[  434.937274] mt76x0u 2-1:1.0: firmware upload failed: -110
+[  435.366339] mt76u_complete_rx: 22502 callbacks suppressed
+[  435.366345] mt76x0u 2-1:1.0: rx urb failed: -32
+[  435.369124] mt76x0u 2-1:1.0: rx urb failed: -32
+[  435.370401] mt76x0u 2-1:1.0: rx urb failed: -32
+[  435.371671] mt76x0u 2-1:1.0: rx urb failed: -32
+[  435.373016] mt76x0u 2-1:1.0: rx urb failed: -32
+[  435.374296] mt76x0u 2-1:1.0: rx urb failed: -32
+[  435.375607] mt76x0u 2-1:1.0: rx urb failed: -32
+[  435.376882] mt76x0u 2-1:1.0: rx urb failed: -32
+[  435.378151] mt76x0u 2-1:1.0: rx urb failed: -32
+[  435.379415] mt76x0u 2-1:1.0: rx urb failed: -32
+[  438.145854] mt76x0u 2-1:1.0: vendor request req:06 off:0800 failed:-110
+[  440.375428] mt76u_complete_rx: 23339 callbacks suppressed
+[  440.375440] mt76x0u 2-1:1.0: rx urb failed: -32
+[  440.378417] mt76x0u 2-1:1.0: rx urb failed: -32
+[  440.379691] mt76x0u 2-1:1.0: rx urb failed: -32
+[  440.380989] mt76x0u 2-1:1.0: rx urb failed: -32
+[  440.382266] mt76x0u 2-1:1.0: rx urb failed: -32
+[  440.383522] mt76x0u 2-1:1.0: rx urb failed: -32
+[  440.384826] mt76x0u 2-1:1.0: rx urb failed: -32
+[  440.386113] mt76x0u 2-1:1.0: rx urb failed: -32
+[  440.387400] mt76x0u 2-1:1.0: rx urb failed: -32
+[  440.388649] mt76x0u 2-1:1.0: rx urb failed: -32
+[  441.375526] mt76x0u 2-1:1.0: vendor request req:07 off:0080 failed:-110
+[  444.575037] mt76x0u 2-1:1.0: vendor request req:06 off:0080 failed:-110
+[  445.384527] mt76u_complete_rx: 23019 callbacks suppressed
+[  445.384533] mt76x0u 2-1:1.0: rx urb failed: -32
+[  445.387252] mt76x0u 2-1:1.0: rx urb failed: -32
+[  445.388513] mt76x0u 2-1:1.0: rx urb failed: -32
+[  445.389777] mt76x0u 2-1:1.0: rx urb failed: -32
+[  445.391058] mt76x0u 2-1:1.0: rx urb failed: -32
+[  445.392316] mt76x0u 2-1:1.0: rx urb failed: -32
+[  445.393576] mt76x0u 2-1:1.0: rx urb failed: -32
+[  445.394819] mt76x0u 2-1:1.0: rx urb failed: -32
+[  445.396067] mt76x0u 2-1:1.0: rx urb failed: -32
+[  445.397294] mt76x0u 2-1:1.0: rx urb failed: -32
+[  447.774372] mt76x0u 2-1:1.0: vendor request req:06 off:0080 failed:-110
+[  447.832903] mt76x0u: probe of 2-1:1.0 failed with error -110
+[  447.834271] usbcore: registered new interface driver mt76x0u

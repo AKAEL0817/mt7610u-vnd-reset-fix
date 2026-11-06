@@ -1,0 +1,5 @@
+[ 6633.394600] usb 2-1: new high-speed USB device number 3 using xhci_hcd
+[ 6633.984711] usb 2-1: reset high-speed USB device number 3 using xhci_hcd
+[ 6634.173967] mt76x0u 2-1:1.0: ASIC revision: 76100002 MAC revision: 76502000
+[ 6635.041416] mt76x0u 2-1:1.0: EEPROM ver:02 fae:01
+[ 6635.102277] ieee80211 phy2: Selected rate control algorithm 'minstrel_ht'
