@@ -16,3 +16,16 @@ c8d3e4314bfc5a58918eb91631a2972f1d781ff5bb312a7ccace71d816b84262  kmod-mt76x0u_6
 ```
 
 Install and verify: follow "Quick start" in the top-level README (steps 2–5).
+
+## Proxmox VE
+
+`mt76x0u_7.0.14-28-pve_vnd-reset.ko` — the verified PVE build, attached to the **v1.1.0** release.
+
+- Kernel **7.0.14-28-pve only** (vermagic-locked; any other kernel release needs a rebuild — see [`../docs/pve-build-guide.md`](../docs/pve-build-guide.md))
+- SHA256:
+
+```
+6b88d32c410c2c2d1e564e997361ac356532e019b254c6e918b7250a7bc1ffb9  mt76x0u_7.0.14-28-pve_vnd-reset.ko
+```
+
+- Use: test-load with `insmod`, or install as `mt76x0u.ko` under `/lib/modules/7.0.14-28-pve/updates/` plus `depmod -a 7.0.14-28-pve` for persistence.
