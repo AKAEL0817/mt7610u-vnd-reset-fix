@@ -3,7 +3,7 @@
 | File | Target | Status |
 | --- | --- | --- |
 | `openwrt-6.6-vnd-reset.patch` | mt76 snapshot `eb567bc7` (OpenWrt 24.10.8, kernel 6.6.144) | **Verified** — built, installed, and tested on real hardware; see `docs/test-results.md` |
-| `pve-7.x-vnd-reset.patch` | Proxmox VE kernel 7.0.14-28-pve | **Planned — not yet ported or verified.** This file will only be added after the port has been built and passed the same before/after test as the OpenWrt patch. Its absence is intentional: this repo does not ship unverified patches. |
+| `pve-7.0-vnd-reset.patch` | Proxmox VE kernel 7.0.14-28-pve (Ubuntu 7.0.0-43.43 tree) | **Verified** — built out-of-tree against the official headers and tested on a bare-metal PVE host; see `docs/test-results.md` and `docs/pve-build-guide.md` |
 
 ## What the patch does
 
@@ -18,4 +18,4 @@ One file, three hunks, against `mt76x0/usb_mcu.c`:
 		mt76x02u_mcu_fw_reset(dev);
 ```
 
-Apply with `git apply`, `git am`, or `patch -p1` at the root of the mt76 source tree. In an OpenWrt build tree, drop it into `package/kernel/mt76/patches/` (a `900-` prefix keeps it after the stock patches) and bump `PKG_RELEASE`.
+Apply with `git apply`, `git am`, or `patch -p1`. The OpenWrt patch's paths are relative to the mt76 source tree root; the PVE patch's paths are relative to the **kernel** source tree root (`drivers/net/wireless/mediatek/mt76/...`). In an OpenWrt build tree, drop the patch into `package/kernel/mt76/patches/` (a `900-` prefix keeps it after the stock patches) and bump `PKG_RELEASE`. For PVE, follow `docs/pve-build-guide.md`.

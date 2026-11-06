@@ -1,6 +1,6 @@
 # Test results
 
-## Environment
+## Environment (OpenWrt)
 
 | Item | Value |
 | --- | --- |
@@ -76,3 +76,43 @@ Both radios receive real-world networks; the adapter is not merely probing, it i
 | 5 GHz scan | n/a | 3 BSSs |
 
 Persistence: the parameter defaults to *skip* in the compiled module, so the fix is active on every subsequent boot with no configuration files. The only persistence risk is a package upgrade replacing the module — mitigated by the opkg hold flag.
+
+## Proxmox VE port — verified (2026-11-07)
+
+| Item | Value |
+| --- | --- |
+| System | Proxmox VE 9.2, bare-metal host (laptop-class machine) |
+| Kernel | 7.0.14-28-pve |
+| Source tree | Ubuntu 7.0.0-43.43, submodule pin `49ecb900ee95547cf6e887aba22a5ce52c617b78` (identified via the headers package's `SOURCE` file; see `pve-build-guide.md`) |
+| Patch | `patches/pve-7.0-vnd-reset.patch` — the same three hunks, applied with zero fuzz |
+| Build | Out-of-tree (`M=`) against the official `proxmox-headers-7.0.14-28-pve`, gcc 14.2; only `mt76x0u` rebuilt |
+| Adapter | The same physical adapter as the OpenWrt test, plugged directly into the host |
+
+Method notes:
+
+- Provenance checks: Proxmox's patch queue contains no mt76 patches; `mt76x0/usb.c` and `usb_mcu.c` are byte-identical between kernel.org v7.0.14 and the pinned Ubuntu tree.
+- The built module's `vermagic` and `depends` are identical to the stock module's, and `modinfo` shows the `vnd_reset` parameter.
+- The test was non-persistent by design: the stock on-disk module was never replaced; the patched module was loaded with `insmod` from a scratch path, so rollback is a single `rmmod`.
+- Failure counting used a dmesg watermark (line count recorded before the plug); only lines logged after the plug were counted — the same discipline as `scripts/verify-module.sh` v2.
+- The stock driver's failure on this same host (bare metal) was one of the original reproductions of the bug, so the before state is established for this environment too.
+
+Result — plug sequence:
+
+```
+usb: new device 0e8d:2870 (virtual CD mode)
+usb-storage detected -> modeswitch disconnect
+usb: new device 0e8d:7610, Product: WiFi, Manufacturer: MediaTek
+mt76x0u: ASIC revision: 76100002 MAC revision: 76502000
+mt76x0u: EEPROM ver:02 fae:01
+ieee80211 phy created (owned by mt76x0u); wireless interface registered
+```
+
+| Check | Stock (this host) | Patched |
+| --- | --- | --- |
+| ASIC/MAC read | OK | OK |
+| Probe result | fail (-110) | success (< 1 s after enumeration) |
+| `vendor request failed: -110` (after plug) | many | **0** |
+| `rx urb failed: -32` (after plug) | flood | **0** |
+| phy / interface created | no | yes |
+
+Known gap: the host has no `iw` installed, so no scan was run in the PVE environment. Firmware load and MCU communication — the steps that fail with the stock driver — complete, and the interface registers; radio reception on this same adapter and driver path is proven by the OpenWrt scan above.

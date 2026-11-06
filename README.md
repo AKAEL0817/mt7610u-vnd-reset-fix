@@ -56,7 +56,7 @@ For the **exact** verified platform (OpenWrt 24.10.8, x86/64, kernel 6.6.144), a
 
 - **Verified only for:** OpenWrt 24.10.8 / kernel 6.6.144 / mt76 snapshot `eb567bc7`, on an adapter reporting ASIC revision `76100002`.
 - The patch context is small and stable; it should apply to nearby mt76 versions with minor fuzz, but **an unverified combination is an experiment, not a fix** — check your `dmesg` signature first (it must match the symptoms above).
-- Proxmox VE (kernel 7.0.14-28-pve) port: **planned, NOT yet ported or verified.** There is deliberately no `pve-7.x` patch in this repo until it has been built and tested the same way. Do not treat this project as PVE support yet.
+- Proxmox VE (kernel 7.0.14-28-pve): **ported and verified** on a bare-metal host — see [`docs/pve-build-guide.md`](docs/pve-build-guide.md) and the PVE section of [`docs/test-results.md`](docs/test-results.md). Other PVE kernel releases remain unverified until re-tested.
 - If your adapter works with the stock driver, you don't need this.
 
 ## Quick start (OpenWrt)
@@ -68,6 +68,10 @@ For the **exact** verified platform (OpenWrt 24.10.8, x86/64, kernel 6.6.144), a
 5. Recommended: `opkg flag hold kmod-mt76x0u` so a later `opkg upgrade` doesn't silently restore the stock driver.
 
 The patched module needs no configuration: the parameter defaults to skipping the reset, so it also survives reboots as-is.
+
+## Quick start (Proxmox VE)
+
+For kernel **7.0.14-28-pve** only: build `mt76x0u` out-of-tree against the official `proxmox-headers` package with the source tree pinned by the headers' own `SOURCE` file, test-load it with `insmod` (non-persistent, one-command rollback), and only then consider installing it under `updates/`. Full procedure: [`docs/pve-build-guide.md`](docs/pve-build-guide.md).
 
 ## References
 

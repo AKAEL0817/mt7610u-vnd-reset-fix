@@ -1,0 +1,40 @@
+--- a/drivers/net/wireless/mediatek/mt76/mt76x0/usb_mcu.c
++++ b/drivers/net/wireless/mediatek/mt76/mt76x0/usb_mcu.c
+@@ -5,6 +5,7 @@
+ #include <linux/kernel.h>
+ #include <linux/firmware.h>
+ #include <linux/module.h>
++#include <linux/moduleparam.h>
+ 
+ #include "mt76x0.h"
+ #include "mcu.h"
+@@ -13,6 +14,19 @@
+ #define MCU_FW_URB_MAX_PAYLOAD		0x38f8
+ #define MCU_FW_URB_SIZE			(MCU_FW_URB_MAX_PAYLOAD + 12)
+ 
++/*
++ * Some MT7610U devices become unresponsive after the firmware
++ * vendor reset in mt76x0u_load_firmware(): subsequent vendor
++ * requests time out (-110) and rx URBs stall (-32), so the probe
++ * never finishes. Gate the reset behind a module parameter.
++ * See https://github.com/openwrt/mt76/issues/454
++ * Default is to skip the reset.
++ */
++static bool vnd_reset;
++module_param(vnd_reset, bool, 0644);
++MODULE_PARM_DESC(vnd_reset,
++		 "Perform vendor reset during firmware upload (default: 0)");
++
+ static int
+ mt76x0u_upload_firmware(struct mt76x02_dev *dev,
+ 			const struct mt76x02_fw_header *hdr)
+@@ -127,7 +141,8 @@
+ 	mt76_set(dev, MT_USB_DMA_CFG,
+ 		 (MT_USB_DMA_CFG_RX_BULK_EN | MT_USB_DMA_CFG_TX_BULK_EN) |
+ 		 FIELD_PREP(MT_USB_DMA_CFG_RX_BULK_AGG_TOUT, 0x20));
+-	mt76x02u_mcu_fw_reset(dev);
++	if (vnd_reset)
++		mt76x02u_mcu_fw_reset(dev);
+ 	usleep_range(5000, 6000);
+ 
+ 	mt76_wr(dev, MT_FCE_PSE_CTRL, 1);
